@@ -14,10 +14,11 @@ userList.sort()
 #need to find middle index, do this by adding 1 to the length of the list and dividing by 2
 #if it comes out with a remainder the median the number halfway between that index rounded down and that index rounded up
 #so if there are 48 numbers, 49/2 = 24.5, the median is halfway between list[24] and list[25] so add them and divide by 2
-#need to subract one from indices because we are calculating the nth number, which would be nth - 1 index
+#need to subract one from indices because we are calculating the nth number, which would be nth - 1 index since index starts at 0
+
 if (len(userList) + 1) % 2 == 0:
     medIndex = (len(userList) + 1) // 2
-    median = userList[medIndex - 1]
+    median = userList[medIndex - 1] #have to adjust for index starting at 0
 else:
     lowIndex = (len(userList) + 1) // 2
     upperIndex = lowIndex + 1
